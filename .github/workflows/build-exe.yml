@@ -27,7 +27,7 @@ jobs:
           pyinstaller app.py --onefile --noconsole --clean --strip --name jimmy_app
 
       - name: Upload EXE artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.3
         with:
           name: jimmy_app_exe
           path: dist/jimmy_app.exe 
