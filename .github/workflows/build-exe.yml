@@ -10,10 +10,10 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.2.2
+      - uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4 # Pinned by SHA in logs - 7f4fc3e22c37d6ff65e88745f38bd3157c663f7c
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
@@ -27,7 +27,7 @@ jobs:
           pyinstaller app.py --onefile --noconsole --clean --strip --name jimmy_app
 
       - name: Upload EXE artifact
-        uses: actions/upload-artifact@ea165f8 # v4.6.2
+        uses: actions/upload-artifact@v4
         with:
           name: jimmy_app_exe
           path: dist/jimmy_app.exe 
